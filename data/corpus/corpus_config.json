@@ -1,0 +1,30 @@
+{
+  "collection": "uae_statutes",
+  "description": "Generic corpus config. Add a new statute by appending an entry and dropping its text file in this folder \u2014 no code change required.",
+  "statutes": [
+    {
+      "law_name": "Federal Decree-Law 33 of 2021",
+      "short_name": "Labour Law",
+      "file": "labour_law_33_2021.txt",
+      "article_pattern": "^Article\\s+\\((\\d+)\\)"
+    },
+    {
+      "law_name": "Federal Decree-Law 45 of 2021",
+      "short_name": "PDPL",
+      "file": "pdpl_45_2021.txt",
+      "article_pattern": "^Article\\s+\\((\\d+)\\)"
+    },
+    {
+      "law_name": "Federal Law 18 of 1993",
+      "short_name": "Commercial Transactions Law",
+      "file": "commercial_transactions_18_1993.txt",
+      "article_pattern": "^Article\\s+\\((\\d+)\\)"
+    },
+    {
+      "law_name": "Federal Law 5 of 1985",
+      "short_name": "Civil Transactions Law",
+      "file": "civil_transactions_5_1985.txt",
+      "article_pattern": "^Article\\s+\\((\\d+)\\)"
+    }
+  ]
+}

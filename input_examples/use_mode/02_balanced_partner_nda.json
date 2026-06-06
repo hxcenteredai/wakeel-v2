@@ -1,0 +1,10 @@
+{
+  "_comment": "Balanced commercial NDA. Used to verify the copilot does not over-flag a market-standard agreement.",
+  "mode": "use",
+  "copilot_id": "cp_a6944a76",
+  "document": {
+    "type": "text",
+    "title": "Mutual NDA — Series A diligence",
+    "content": "MUTUAL NON-DISCLOSURE AGREEMENT\n\n1. Confidential Information means non-public information disclosed by one party (the \"Disclosing Party\") to the other (the \"Receiving Party\") that is marked confidential or that a reasonable person would consider confidential under the circumstances.\n\n2. Cross-border transfers. Vendor may transfer Confidential Information to its banking partners outside the UAE without further notice to the Discloser, except where such Confidential Information contains Personal Data, in which case the Discloser's prior written consent shall be required, consistent with the UAE Personal Data Protection Law.\n\n3. Confidentiality period. The obligation of confidentiality shall survive termination of this Agreement for a period of three (3) years, save for trade secrets, which shall remain confidential indefinitely.\n\n4. Termination. Either party may terminate this Agreement upon thirty (30) days' prior written notice; provided that termination shall not affect any confidentiality obligations accrued before the effective date of termination.\n\n5. Remedies. The parties acknowledge that monetary damages may be inadequate and that the Disclosing Party shall be entitled to seek equitable relief."
+  }
+}

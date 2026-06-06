@@ -1,0 +1,10 @@
+{
+  "mode": "build",
+  "intake": {
+    "workflow_description": "We are a Dubai fintech. I need a copilot that reviews vendor NDAs against our conservative data-handling stance under UAE PDPL, flagging cross-border transfer and consent clauses.",
+    "org_id": "fintech_co_001",
+    "document_type": "nda",
+    "risk_appetite": "conservative",
+    "language": "en"
+  }
+}

@@ -1,0 +1,1 @@
+{"offline_mode":false,"sample_mode":true,"base_url":"https://api.openai.com/v1","api_key_masked":"sk-p...LxkA","models":{"standard":"gpt-4o-mini","reasoning":"gpt-4o","embedding":"text-embedding-3-large"},"interviewer_model":""}

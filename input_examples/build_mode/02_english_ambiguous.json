@@ -1,0 +1,7 @@
+{
+  "mode": "build",
+  "intake": {
+    "workflow_description": "review NDAs",
+    "language": "en"
+  }
+}

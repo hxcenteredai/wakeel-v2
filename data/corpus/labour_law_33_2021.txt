@@ -1,0 +1,51 @@
+UAE Federal Decree-Law No. 33 of 2021 on the Regulation of Labour Relations
+PLACEHOLDER / PUBLIC EXCERPT — replace with the founder's official full text.
+This file is parsed by article using the pattern "^Article \((\d+)\)".
+
+Article (1)
+Definitions. In application of the provisions of this Decree-Law, the following
+words and expressions shall have the meanings assigned to each, unless the
+context requires otherwise: Establishment, Employer, Worker, Work, Employment
+Contract, Wage, Basic Wage, and related terms as defined by the Ministry.
+
+Article (8)
+The employment contract shall be drawn up in two copies, one to be delivered to
+the worker and the other to be kept by the employer. The employment relationship
+may be proven by all means of evidence where no written contract exists.
+
+Article (13)
+The employment contract shall include, in particular: the name of the employer
+and place of business; the name, qualifications, profession and nationality of
+the worker; the date of conclusion of the contract; the date of commencement of
+work; the place of work; the term of the contract; the wage and benefits; and
+the probation period if any.
+
+Article (30)
+The maternity leave entitlement for a working woman shall be sixty (60) days,
+comprising forty-five (45) days on full pay and fifteen (15) days on half pay,
+subject to the conditions set out in the implementing regulations.
+
+Article (43)
+Either party to the employment contract may terminate it for a legitimate reason,
+provided that the other party is notified in writing and work continues during
+the notice period, which shall be not less than thirty (30) days and not more
+than ninety (90) days. The party who fails to honour the notice period shall pay
+the other party compensation in lieu of notice.
+
+Article (51)
+The worker who has completed one year or more of continuous service shall be
+entitled to an end-of-service benefit calculated on the basis of the basic wage:
+twenty-one (21) days' wage for each of the first five years of service, and
+thirty (30) days' wage for each additional year, provided the total does not
+exceed two years' wage.
+
+Article (65)
+The maximum normal working hours for workers shall be eight (8) hours per day or
+forty-eight (48) hours per week. Working hours may be increased or decreased for
+certain economic sectors or categories of workers pursuant to the implementing
+regulations.
+
+Article (71)
+Without prejudice to categories excepted by the implementing regulations, a
+worker may not be required to work more than five (5) consecutive hours without
+breaks for rest, food and prayer, which are not counted within working hours.

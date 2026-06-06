@@ -1,0 +1,45 @@
+{
+  "org_id": "fintech_co_001",
+  "org_display_name": "Demo Fintech Co (UAE)",
+  "interpretation_overrides": [
+    {
+      "law": "Federal Decree-Law 45 of 2021",
+      "article": "Article 7",
+      "stance": "We require explicit, separately-captured consent re-confirmation for any data shared with banking partners, regardless of base law minimums. Consent obtained as part of a general T&Cs acceptance is not sufficient.",
+      "rationale": "Banking partner contractual requirement; conservative posture relative to base PDPL standard."
+    },
+    {
+      "law": "Federal Decree-Law 45 of 2021",
+      "article": "Article 22",
+      "stance": "Cross-border data transfers must include a written assessment by the DPO documenting the destination jurisdiction's adequacy status. Standard contractual clauses alone are not sufficient.",
+      "rationale": "Post-2024 board policy after near-miss with EU regulator inquiry."
+    },
+    {
+      "law": "Federal Law 5 of 1985",
+      "article": "Articles 246-247",
+      "stance": "We reject indemnity clauses with uncapped liability for any third-party claim. Cap must be the higher of (a) 12 months fees paid by counterparty, or (b) AED 500,000.",
+      "rationale": "Insurance carrier requirement; standardized across all vendor contracts since Q1 2024."
+    }
+  ],
+  "risk_thresholds": {
+    "high_flag_confidence_min": 0.80,
+    "medium_flag_confidence_min": 0.60,
+    "auto_escalate_to_human": [
+      "data_transfer_abroad",
+      "indemnity_caps",
+      "ip_assignment",
+      "exclusivity_clauses"
+    ]
+  },
+  "internal_corpus_additions": [
+    "data/orgs/fintech_co_001/internal_policy_pdpl_v3.pdf",
+    "data/orgs/fintech_co_001/board_approved_nda_template.pdf",
+    "data/orgs/fintech_co_001/vendor_data_handling_standard_v2.pdf"
+  ],
+  "output_preferences": {
+    "tone": "formal_legal",
+    "max_findings_per_doc": 25,
+    "include_business_impact_summary": true,
+    "default_review_language": "en"
+  }
+}

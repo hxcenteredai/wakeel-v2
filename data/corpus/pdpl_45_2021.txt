@@ -1,0 +1,50 @@
+UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL)
+PLACEHOLDER / PUBLIC EXCERPT — replace with the founder's official full text.
+This file is parsed by article using the pattern "^Article \((\d+)\)".
+
+Article (1)
+Definitions. The following terms shall have the meanings assigned thereto:
+Personal Data, Sensitive Personal Data, Processing, Controller, Processor, Data
+Subject, Consent, Cross-Border Transfer, and the UAE Data Office, as defined for
+the purposes of this Decree-Law.
+
+Article (4)
+Personal Data may not be processed without the consent of the Data Subject,
+except in the cases stipulated in this Decree-Law, including where processing is
+necessary for the performance of a contract, compliance with a legal obligation,
+or the protection of the vital interests of the Data Subject.
+
+Article (5)
+Personal Data shall be processed in a fair, transparent and lawful manner; it
+shall be collected for specified, clear and legitimate purposes; and it shall be
+accurate, complete and kept up to date, and limited to what is necessary for the
+purposes of processing.
+
+Article (7)
+Where processing is based on consent, the Controller must be able to demonstrate
+that the Data Subject has given consent to the processing of Personal Data. The
+Data Subject may withdraw consent at any time, and withdrawal shall be as easy as
+giving consent. Consent must be given by a clear affirmative act, freely, in a
+specific and unambiguous manner.
+
+Article (9)
+The Data Subject shall have the right to request information about the categories
+of Personal Data processed, the purposes of processing, the recipients to whom
+data is or will be disclosed, and the mechanisms for cross-border transfer.
+
+Article (13)
+The Data Subject shall have the right to request the erasure of their Personal
+Data held by the Controller, subject to the exceptions set out in this
+Decree-Law, including retention required for compliance with a legal obligation.
+
+Article (22)
+The Controller shall notify the UAE Data Office of any breach of Personal Data
+that would prejudice the privacy, confidentiality or security of the data of the
+Data Subject, upon becoming aware of such breach, together with the results of
+any investigation.
+
+Article (23)
+Personal Data may be transferred outside the State to jurisdictions that ensure
+an adequate level of protection. In the absence of an adequacy decision, transfer
+is permitted subject to appropriate safeguards, the explicit consent of the Data
+Subject, or the other conditions stipulated in this Decree-Law.

@@ -1,0 +1,11 @@
+{
+  "_comment": "Hospital-themed Arabic NDA intake, referenced by Milestone Amendment §3 criterion 4.",
+  "mode": "build",
+  "intake": {
+    "workflow_description": "نحن مستشفى خاص في أبوظبي ونحتاج إلى مساعد لمراجعة اتفاقيات عدم الإفصاح مع موردي الأجهزة الطبية ومقدمي الخدمات السحابية، مع التشدد في حماية البيانات الصحية للمرضى وفق قانون حماية البيانات الشخصية الإماراتي والتزامات السرية المهنية. يجب أن يرفض المساعد أي بنود تسمح بنقل بيانات المرضى خارج الدولة دون موافقة صريحة.",
+    "org_id": "abu_dhabi_hospital_001",
+    "document_type": "nda",
+    "risk_appetite": "conservative",
+    "language": "ar"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_comment": "Data-broker NDA — high regulatory risk under UAE PDPL; multiple cross-border and consent clauses to exercise the Citation Verifier and counter-proposal pipeline.",
+  "mode": "use",
+  "copilot_id": "cp_a6944a76",
+  "document": {
+    "type": "text",
+    "title": "Data-broker NDA — v0.3",
+    "content": "DATA SHARING NON-DISCLOSURE AGREEMENT\n\n1. Definitions. \"Data\" includes any pseudonymised or hashed customer record provided by the Discloser to the Recipient for analytics enrichment.\n\n2. Cross-border transfers. Vendor may transfer Confidential Information, including any Data, to its banking partners outside the UAE without further notice to the Discloser, irrespective of the destination jurisdiction's adequacy status.\n\n3. Onward transfers. Recipient may sublicense the Data to its own analytics partners, including outside the UAE, under back-to-back terms substantially similar to this Agreement.\n\n4. Confidentiality. The obligation of confidentiality shall expire upon termination of this Agreement.\n\n5. Termination. Either party may terminate this Agreement upon seven (7) days written notice for any reason.\n\n6. Audit. Recipient is not obligated to provide audit access to the Discloser; provided that Recipient shall annually self-certify compliance with this Agreement.\n\n7. Governing law. This Agreement is governed by the laws of the United Arab Emirates."
+  }
+}

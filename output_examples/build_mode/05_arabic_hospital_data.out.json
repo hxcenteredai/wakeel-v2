@@ -1,0 +1,285 @@
+{
+  "status": "success",
+  "agents": [
+    {
+      "name": "Interviewer",
+      "role": "Extracts structured requirements; accepts Arabic or English input"
+    },
+    {
+      "name": "Stance Debater A",
+      "role": "Argues strict-compliance interpretation"
+    },
+    {
+      "name": "Stance Debater B",
+      "role": "Argues business-practical interpretation"
+    },
+    {
+      "name": "Architect",
+      "role": "Synthesizes requirements and debate into a copilot config"
+    },
+    {
+      "name": "Builder",
+      "role": "Instantiates the copilot from the config"
+    },
+    {
+      "name": "Validator",
+      "role": "Runs sample inputs through the new copilot and rejects if substandard"
+    },
+    {
+      "name": "Reviewer",
+      "role": "Reviews documents against the org-tuned stance"
+    },
+    {
+      "name": "Citation Verifier",
+      "role": "Validates every regulatory citation against the corpus via exact-text retrieval"
+    },
+    {
+      "name": "Counter-Proposal Drafter",
+      "role": "Drafts replacement clauses for flagged risks"
+    },
+    {
+      "name": "Synthesis",
+      "role": "Assembles final output with confidence scores and audit trail"
+    }
+  ],
+  "trace_id": "<deterministic-offline-trace>",
+  "log_file": "logs/run_<deterministic-offline-trace>.jsonl",
+  "execution_time_seconds": 0.0,
+  "run_id": "<deterministic-offline-run>",
+  "mode": "build",
+  "copilot_id": "cp_7bc77de7",
+  "config": {
+    "copilot_id": "cp_7bc77de7",
+    "template": "nda_review",
+    "org_id": "hospital_uae_001",
+    "system_prompts": {
+      "reviewer": "You review NDAs against the org's tuned PDPL/Labour stance. Flag clauses with confidence scores; cite exact articles.",
+      "citation_verifier": "Verify every cited article against the corpus via exact-text retrieval; reject hallucinated citations."
+    },
+    "output_schema": {
+      "findings": [
+        {
+          "clause": "str",
+          "risk": "high|medium|low",
+          "confidence": "float",
+          "citation": {
+            "law": "str",
+            "article": "str"
+          },
+          "rationale": "str"
+        }
+      ]
+    },
+    "retrieval_rules": {
+      "laws": [
+        "Federal Decree-Law 33 of 2021",
+        "Federal Decree-Law 45 of 2021"
+      ],
+      "top_k": 5,
+      "chunk_by": "article"
+    },
+    "risk_thresholds": {
+      "high_flag_confidence_min": 0.8,
+      "medium_flag_confidence_min": 0.6,
+      "auto_escalate_to_human": [
+        "data_transfer_abroad",
+        "indemnity_caps"
+      ]
+    },
+    "interpretation_overrides": [
+      {
+        "law": "Federal Decree-Law 45 of 2021",
+        "article": "Article 7",
+        "stance": "Require explicit consent re-confirmation for cross-border transfers to banking partners.",
+        "rationale": "Conservative posture from strict-compliance debate."
+      }
+    ]
+  },
+  "validation_results": {
+    "passed": true,
+    "score": 0.91,
+    "issues": [],
+    "feedback": "Sample NDA produced 3 well-cited findings; thresholds applied correctly."
+  },
+  "audit_trail": [
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "orchestrator",
+      "action": "run_start",
+      "decision": "build",
+      "reason": "POST /run mode=build",
+      "loop": null,
+      "details": {}
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Interviewer",
+      "action": "extract_requirements",
+      "decision": "structured",
+      "reason": "Requirements extracted.",
+      "loop": null,
+      "details": {
+        "language": "ar",
+        "org_id": "hospital_uae_001"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Debater A",
+      "action": "debate_argument",
+      "decision": "strict_compliance",
+      "reason": "Round 1",
+      "loop": "Loop 1",
+      "details": {
+        "arguments": [
+          "PDPL Article 7 consent must be explicit and re-confirmed for any cross-border transfer to banking partners.",
+          "Confidentiality obligations should survive termination indefinitely for personal data categories.",
+          "Indemnity caps below full liability expose the org under PDPL breach notification duties."
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Debater B",
+      "action": "debate_argument",
+      "decision": "business_practicality",
+      "reason": "Round 1",
+      "loop": "Loop 1",
+      "details": {
+        "arguments": [
+          "Indefinite confidentiality is rarely accepted by vendors; a 5-year tail post-termination is market-standard and enforceable.",
+          "Blanket re-consent on every transfer creates operational friction; a documented standing consent with audit log meets PDPL intent.",
+          "Mutual indemnity caps at 12 months fees are commercially reasonable."
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Architect",
+      "action": "synthesize_or_escalate",
+      "decision": "request_more_debate",
+      "reason": "Need at least two rounds to resolve the cross-border consent split.",
+      "loop": "Loop 1",
+      "details": {
+        "has_config_outline": false
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Debater A",
+      "action": "debate_argument",
+      "decision": "strict_compliance",
+      "reason": "Round 2",
+      "loop": "Loop 1",
+      "details": {
+        "arguments": [
+          "PDPL Article 7 consent must be explicit and re-confirmed for any cross-border transfer to banking partners.",
+          "Confidentiality obligations should survive termination indefinitely for personal data categories.",
+          "Indemnity caps below full liability expose the org under PDPL breach notification duties."
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Debater B",
+      "action": "debate_argument",
+      "decision": "business_practicality",
+      "reason": "Round 2",
+      "loop": "Loop 1",
+      "details": {
+        "arguments": [
+          "Indefinite confidentiality is rarely accepted by vendors; a 5-year tail post-termination is market-standard and enforceable.",
+          "Blanket re-consent on every transfer creates operational friction; a documented standing consent with audit log meets PDPL intent.",
+          "Mutual indemnity caps at 12 months fees are commercially reasonable."
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Architect",
+      "action": "synthesize_or_escalate",
+      "decision": "synthesize",
+      "reason": "",
+      "loop": null,
+      "details": {
+        "has_config_outline": true
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Builder",
+      "action": "instantiate_copilot",
+      "decision": "built",
+      "reason": "Copilot config generated.",
+      "loop": null,
+      "details": {
+        "copilot_id": "cp_7bc77de7",
+        "template": "nda_review"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Validator",
+      "action": "validate_copilot",
+      "decision": "rejected",
+      "reason": "Tighten reviewer prompt to mandate citations; wire escalation list.",
+      "loop": "Loop 2",
+      "details": {
+        "score": 0.62,
+        "iteration": 1,
+        "issues": [
+          "Reviewer prompt does not enforce citation on every regulatory claim.",
+          "Risk threshold for data_transfer_abroad not wired to auto-escalation."
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Builder",
+      "action": "instantiate_copilot",
+      "decision": "built",
+      "reason": "Copilot config generated.",
+      "loop": null,
+      "details": {
+        "copilot_id": "cp_7bc77de7",
+        "template": "nda_review"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "Validator",
+      "action": "validate_copilot",
+      "decision": "passed",
+      "reason": "Sample NDA produced 3 well-cited findings; thresholds applied correctly.",
+      "loop": "Loop 2",
+      "details": {
+        "score": 0.91,
+        "iteration": 2,
+        "issues": []
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "build",
+      "agent": "orchestrator",
+      "action": "run_complete",
+      "decision": "ok",
+      "reason": "copilot cp_7bc77de7 validated",
+      "loop": null,
+      "details": {}
+    }
+  ],
+  "interviewer_response": "تم استلام طلبك. جارٍ بناء المساعد."
+}

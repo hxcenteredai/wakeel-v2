@@ -1,0 +1,350 @@
+{
+  "status": "success",
+  "agents": [
+    {
+      "name": "Interviewer",
+      "role": "Extracts structured requirements; accepts Arabic or English input"
+    },
+    {
+      "name": "Stance Debater A",
+      "role": "Argues strict-compliance interpretation"
+    },
+    {
+      "name": "Stance Debater B",
+      "role": "Argues business-practical interpretation"
+    },
+    {
+      "name": "Architect",
+      "role": "Synthesizes requirements and debate into a copilot config"
+    },
+    {
+      "name": "Builder",
+      "role": "Instantiates the copilot from the config"
+    },
+    {
+      "name": "Validator",
+      "role": "Runs sample inputs through the new copilot and rejects if substandard"
+    },
+    {
+      "name": "Reviewer",
+      "role": "Reviews documents against the org-tuned stance"
+    },
+    {
+      "name": "Citation Verifier",
+      "role": "Validates every regulatory citation against the corpus via exact-text retrieval"
+    },
+    {
+      "name": "Counter-Proposal Drafter",
+      "role": "Drafts replacement clauses for flagged risks"
+    },
+    {
+      "name": "Synthesis",
+      "role": "Assembles final output with confidence scores and audit trail"
+    }
+  ],
+  "trace_id": "<deterministic-offline-trace>",
+  "log_file": "logs/run_<deterministic-offline-trace>.jsonl",
+  "execution_time_seconds": 0.0,
+  "run_id": "<deterministic-offline-run>",
+  "mode": "use",
+  "copilot_id": "cp_a6944a76",
+  "findings": [
+    {
+      "clause": "Vendor may transfer Confidential Information to its banking partners outside the UAE without further notice to the Discloser.",
+      "risk": "high",
+      "confidence": 0.93,
+      "citation": {
+        "law": "Federal Decree-Law 45 of 2021",
+        "article": "7",
+        "verified": true,
+        "exact_text": "Article (7)\nWhere processing is based on consent, the Controller must be able to demonstrate\nthat the Data Subject has given consent to the processing of Personal Data. The\nData Subject may withdraw consent at any time, and withdrawal shall be as easy as\ngiving consent. Consent must be given by a clear affirmative act, freely, in a\nspecific and unambiguous manner.",
+        "verification_attempts": 2
+      },
+      "rationale": "Cross-border personal-data transfer without explicit consent re-confirmation violates the org's tuned PDPL stance (override applied).",
+      "counter_proposal": "Any cross-border transfer of Confidential Information that includes Personal Data shall require the Discloser's prior explicit written consent re-confirmed at the time of transfer, with a documented audit log retained for the duration of the contract and seven (7) years thereafter, consistent with Federal Decree-Law 45 of 2021 (PDPL) consent requirements.",
+      "counter_proposal_iterations": 2,
+      "counter_proposal_accepted": true
+    },
+    {
+      "clause": "The obligation of confidentiality shall expire upon termination of this Agreement.",
+      "risk": "medium",
+      "confidence": 0.84,
+      "citation": {
+        "law": "Federal Law 18 of 1993",
+        "article": "87",
+        "verified": true,
+        "exact_text": "Article (87)\nA trader who, by reason of his profession, becomes aware of confidential\ninformation concerning the business of another party shall keep that\ninformation secret and shall not disclose it to any third party except with the\nwritten consent of the owner of the information or pursuant to an order of a\ncompetent court. Disclosure or use of such information in breach of this\nobligation entitles the injured party to compensation.",
+        "verification_attempts": 1
+      },
+      "rationale": "Confidentiality of trade information should extend beyond termination for a reasonable period under commercial custom.",
+      "counter_proposal": "Obligations of confidentiality shall survive termination of this Agreement for a period of five (5) years, save for trade secrets and Personal Data, which shall remain confidential indefinitely until they enter the public domain by lawful means.",
+      "counter_proposal_iterations": 2,
+      "counter_proposal_accepted": true
+    },
+    {
+      "clause": "Either party may terminate this Agreement upon seven (7) days written notice for any reason.",
+      "risk": "low",
+      "confidence": 0.71,
+      "citation": {
+        "law": "Federal Law 5 of 1985",
+        "article": "246",
+        "verified": true,
+        "exact_text": "Article (246)\n(1) A contract shall be performed in accordance with its terms and in a manner\nconsistent with the requirements of good faith. (2) A contract shall not be\nlimited to obligating a contracting party to its express terms but shall extend\nto that which is incidental to it in accordance with law, custom, and the\nnature of the transaction.",
+        "verification_attempts": 1
+      },
+      "rationale": "Short notice for termination at convenience should be exercised in accordance with the good-faith principle of the Civil Code."
+    }
+  ],
+  "summary": {
+    "total_findings": 3,
+    "high_risk": 1,
+    "medium_risk": 1,
+    "low_risk": 1,
+    "verified_citations": 3,
+    "citation_rejections": 1,
+    "draft_critiques": 2,
+    "recommendation": "DO NOT SIGN as-is — material PDPL risk on cross-border transfer."
+  },
+  "audit_trail": [
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "orchestrator",
+      "action": "run_start",
+      "decision": "use",
+      "reason": "POST /run mode=use copilot=cp_a6944a76",
+      "loop": null,
+      "details": {
+        "copilot_id": "cp_a6944a76"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "review_document",
+      "decision": "3 findings",
+      "reason": "Initial pass over the NDA.",
+      "loop": null,
+      "details": {
+        "attempt": 1,
+        "findings_count": 3
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Citation Verifier",
+      "action": "verify_citation",
+      "decision": "rejected",
+      "reason": "Article not found in corpus; offered 3 candidates.",
+      "loop": "Loop 4",
+      "details": {
+        "law": "Federal Decree-Law 45 of 2021",
+        "article": "99",
+        "attempt": 1,
+        "candidates": [
+          "Civil Transactions Law Art 257",
+          "Commercial Transactions Law Art 2",
+          "Civil Transactions Law Art 390"
+        ]
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Citation Verifier",
+      "action": "verify_citation",
+      "decision": "verified",
+      "reason": "Exact-text retrieval succeeded.",
+      "loop": "Loop 4",
+      "details": {
+        "law": "Federal Law 18 of 1993",
+        "article": "87",
+        "attempt": 1,
+        "candidates": []
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Citation Verifier",
+      "action": "verify_citation",
+      "decision": "verified",
+      "reason": "Exact-text retrieval succeeded.",
+      "loop": "Loop 4",
+      "details": {
+        "law": "Federal Law 5 of 1985",
+        "article": "246",
+        "attempt": 1,
+        "candidates": []
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "re_cite",
+      "decision": "recited",
+      "reason": "Citation Verifier rejected the prior cite.",
+      "loop": "Loop 4",
+      "details": {
+        "attempt": 2,
+        "rejected": {
+          "law": "Federal Decree-Law 45 of 2021",
+          "article": "99"
+        },
+        "proposed": {
+          "law": "Federal Decree-Law 45 of 2021",
+          "article": "7",
+          "verified": true,
+          "exact_text": "Article (7)\nWhere processing is based on consent, the Controller must be able to demonstrate\nthat the Data Subject has given consent to the processing of Personal Data. The\nData Subject may withdraw consent at any time, and withdrawal shall be as easy as\ngiving consent. Consent must be given by a clear affirmative act, freely, in a\nspecific and unambiguous manner.",
+          "verification_attempts": 2
+        }
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Citation Verifier",
+      "action": "verify_citation",
+      "decision": "verified",
+      "reason": "Exact-text retrieval succeeded.",
+      "loop": "Loop 4",
+      "details": {
+        "law": "Federal Decree-Law 45 of 2021",
+        "article": "7",
+        "attempt": 2,
+        "candidates": []
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Initial draft.",
+      "loop": null,
+      "details": {
+        "attempt": 1,
+        "clause": "Vendor may transfer Confidential Information to its banking partners outside the"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Initial draft.",
+      "loop": null,
+      "details": {
+        "attempt": 1,
+        "clause": "The obligation of confidentiality shall expire upon termination of this Agreemen"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "rejected",
+      "reason": "Draft is too generic; it does not anchor on the cited statute or quantify the remediation. Tighten with explicit obligations and reference the cited article.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 1,
+        "accepted": false
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "rejected",
+      "reason": "Draft is too generic; it does not anchor on the cited statute or quantify the remediation. Tighten with explicit obligations and reference the cited article.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 1,
+        "accepted": false
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Revised after critique (attempt 2).",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "clause": "Vendor may transfer Confidential Information to its banking partners outside the"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Revised after critique (attempt 2).",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "clause": "The obligation of confidentiality shall expire upon termination of this Agreemen"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "accepted",
+      "reason": "Draft anchors on the cited statute and resolves the flagged risk.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "accepted": true
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "accepted",
+      "reason": "Draft anchors on the cited statute and resolves the flagged risk.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "accepted": true
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Synthesis",
+      "action": "assemble_response",
+      "decision": "synthesised",
+      "reason": "Final response assembled.",
+      "loop": null,
+      "details": {
+        "total_findings": 3,
+        "citation_rejections": 1,
+        "draft_critiques": 2
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "orchestrator",
+      "action": "run_complete",
+      "decision": "ok",
+      "reason": "3 findings, 1 citation rejections (Loop 4), 2 draft critiques (Loop 5)",
+      "loop": null,
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "project_name": "Wakeel",
+  "tagline": "Sovereign UAE regulatory agent factory with org-tuned interpretation",
+  "category": "AgentOps / Regulatory / Legal",
+  "use_case_id": "21",
+  "version": "1.0.0",
+  "team": {
+    "name": "Wakeel",
+    "members": [
+      "Jillian David"
+    ]
+  },
+  "agents": [
+    {
+      "name": "Interviewer",
+      "role": "Extracts structured requirements; accepts Arabic or English input",
+      "mode": "build"
+    },
+    {
+      "name": "Stance Debater A",
+      "role": "Argues strict-compliance interpretation",
+      "mode": "build"
+    },
+    {
+      "name": "Stance Debater B",
+      "role": "Argues business-practical interpretation",
+      "mode": "build"
+    },
+    {
+      "name": "Architect",
+      "role": "Synthesizes requirements and debate into a copilot config",
+      "mode": "build"
+    },
+    {
+      "name": "Builder",
+      "role": "Instantiates the copilot from the config",
+      "mode": "build"
+    },
+    {
+      "name": "Validator",
+      "role": "Runs sample inputs through the new copilot and rejects if substandard",
+      "mode": "build"
+    },
+    {
+      "name": "Reviewer",
+      "role": "Reviews documents against the org-tuned stance",
+      "mode": "use"
+    },
+    {
+      "name": "Citation Verifier",
+      "role": "Validates every regulatory citation against the corpus via exact-text retrieval",
+      "mode": "use"
+    },
+    {
+      "name": "Counter-Proposal Drafter",
+      "role": "Drafts replacement clauses for flagged risks",
+      "mode": "use"
+    },
+    {
+      "name": "Synthesis",
+      "role": "Assembles final output with confidence scores and audit trail",
+      "mode": "use"
+    }
+  ],
+  "collaboration_loops": [
+    {
+      "name": "Loop 1 — Stance Debate",
+      "agents": [
+        "Stance Debater A",
+        "Stance Debater B",
+        "Architect"
+      ],
+      "mode": "build"
+    },
+    {
+      "name": "Loop 2 — Validation Rejection",
+      "agents": [
+        "Validator",
+        "Builder"
+      ],
+      "mode": "build"
+    },
+    {
+      "name": "Loop 3 — Requirements Clarification",
+      "agents": [
+        "Architect",
+        "Interviewer"
+      ],
+      "mode": "build"
+    },
+    {
+      "name": "Loop 4 — Citation Rejection",
+      "agents": [
+        "Reviewer",
+        "Citation Verifier"
+      ],
+      "mode": "use"
+    },
+    {
+      "name": "Loop 5 — Counter-Proposal Critique",
+      "agents": [
+        "Counter-Proposal Drafter",
+        "Reviewer"
+      ],
+      "mode": "use"
+    }
+  ],
+  "models_used": [
+    "gpt-4.1",
+    "gpt-5.1",
+    "text-embedding-3-large"
+  ],
+  "tools_used": [
+    "langgraph",
+    "fastapi",
+    "streamlit",
+    "chromadb",
+    "openai-sdk",
+    "compass-api",
+    "tenacity",
+    "pypdf"
+  ],
+  "data_sources": [
+    "UAE Federal Decree-Law 33 of 2021 (Labour Law)",
+    "UAE Federal Decree-Law 45 of 2021 (Personal Data Protection Law)",
+    "Synthetic NDA documents (input_examples/)"
+  ],
+  "output_type": "text",
+  "orchestration": "LangGraph",
+  "api": {
+    "endpoint": "POST /run",
+    "port": 8000,
+    "modes": [
+      "build",
+      "use"
+    ]
+  },
+  "ui": {
+    "framework": "Streamlit",
+    "port": 8001,
+    "languages_supported": [
+      "English",
+      "Arabic"
+    ]
+  },
+  "demo_video_url": "https://drive.google.com/drive/folders/15DftyotUBKH0qZXUIqAyH__y8IYZgeNk?usp=sharing",
+  "github_repo": "https://github.com/hxcenteredai/wakeel",
+  "submission_date": "2026-06-07"
+}

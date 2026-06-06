@@ -1,0 +1,197 @@
+{
+  "status": "success",
+  "agents": [
+    {
+      "name": "Interviewer",
+      "role": "Extracts structured requirements; accepts Arabic or English input"
+    },
+    {
+      "name": "Stance Debater A",
+      "role": "Argues strict-compliance interpretation"
+    },
+    {
+      "name": "Stance Debater B",
+      "role": "Argues business-practical interpretation"
+    },
+    {
+      "name": "Architect",
+      "role": "Synthesizes requirements and debate into a copilot config"
+    },
+    {
+      "name": "Builder",
+      "role": "Instantiates the copilot from the config"
+    },
+    {
+      "name": "Validator",
+      "role": "Runs sample inputs through the new copilot and rejects if substandard"
+    },
+    {
+      "name": "Reviewer",
+      "role": "Reviews documents against the org-tuned stance"
+    },
+    {
+      "name": "Citation Verifier",
+      "role": "Validates every regulatory citation against the corpus via exact-text retrieval"
+    },
+    {
+      "name": "Counter-Proposal Drafter",
+      "role": "Drafts replacement clauses for flagged risks"
+    },
+    {
+      "name": "Synthesis",
+      "role": "Assembles final output with confidence scores and audit trail"
+    }
+  ],
+  "trace_id": "<deterministic-offline-trace>",
+  "log_file": "logs/run_<deterministic-offline-trace>.jsonl",
+  "execution_time_seconds": 0.0,
+  "run_id": "<deterministic-offline-run>",
+  "mode": "use",
+  "copilot_id": "cp_a6944a76",
+  "findings": [
+    {
+      "clause": "The obligation of confidentiality shall survive termination of this Agreement for a period of three (3) years, save for trade secrets, which shall remain confidential indefinitely.",
+      "risk": "medium",
+      "confidence": 0.78,
+      "citation": {
+        "law": "Federal Law 18 of 1993",
+        "article": "396",
+        "verified": true,
+        "exact_text": "Article (396)\nWhere parties to a commercial agreement have expressly agreed on duties of\nconfidentiality, such duties shall be construed in accordance with the express\nterms of the agreement, supplemented by the general duties of good faith and\ntrade custom under this Law. In the absence of an express term, confidentiality\nobligations relating to non-public commercial information shall survive\ntermination of the commercial relationship for a reasonable period.",
+        "verification_attempts": 1
+      },
+      "rationale": "Three-year survival is below the five-year tail recommended by the org's tuned stance; trade-secret carve-out is acceptable.",
+      "counter_proposal": "Termination shall be exercised in good faith with not less than thirty (30) days' prior written notice for convenience, save for termination for cause for which the notice period shall be seven (7) days following a written cure period.",
+      "counter_proposal_iterations": 2,
+      "counter_proposal_accepted": true
+    }
+  ],
+  "summary": {
+    "total_findings": 1,
+    "high_risk": 0,
+    "medium_risk": 1,
+    "low_risk": 0,
+    "verified_citations": 1,
+    "citation_rejections": 0,
+    "draft_critiques": 1,
+    "recommendation": "Acceptable subject to the listed counter-proposals."
+  },
+  "audit_trail": [
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "orchestrator",
+      "action": "run_start",
+      "decision": "use",
+      "reason": "POST /run mode=use copilot=cp_a6944a76",
+      "loop": null,
+      "details": {
+        "copilot_id": "cp_a6944a76"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "review_document",
+      "decision": "1 findings",
+      "reason": "Initial pass over the NDA.",
+      "loop": null,
+      "details": {
+        "attempt": 1,
+        "findings_count": 1
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Citation Verifier",
+      "action": "verify_citation",
+      "decision": "verified",
+      "reason": "Exact-text retrieval succeeded.",
+      "loop": "Loop 4",
+      "details": {
+        "law": "Federal Law 18 of 1993",
+        "article": "396",
+        "attempt": 1,
+        "candidates": []
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Initial draft.",
+      "loop": null,
+      "details": {
+        "attempt": 1,
+        "clause": "The obligation of confidentiality shall survive termination of this Agreement fo"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "rejected",
+      "reason": "Draft is too generic; it does not anchor on the cited statute or quantify the remediation. Tighten with explicit obligations and reference the cited article.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 1,
+        "accepted": false
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Counter-Proposal Drafter",
+      "action": "draft_counter_proposal",
+      "decision": "drafted",
+      "reason": "Revised after critique (attempt 2).",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "clause": "The obligation of confidentiality shall survive termination of this Agreement fo"
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Reviewer",
+      "action": "critique_draft",
+      "decision": "accepted",
+      "reason": "Draft anchors on the cited statute and resolves the flagged risk.",
+      "loop": "Loop 5",
+      "details": {
+        "attempt": 2,
+        "accepted": true
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "Synthesis",
+      "action": "assemble_response",
+      "decision": "synthesised",
+      "reason": "Final response assembled.",
+      "loop": null,
+      "details": {
+        "total_findings": 1,
+        "citation_rejections": 0,
+        "draft_critiques": 1
+      }
+    },
+    {
+      "run_id": "<deterministic-offline-run>",
+      "mode": "use",
+      "agent": "orchestrator",
+      "action": "run_complete",
+      "decision": "ok",
+      "reason": "1 findings, 0 citation rejections (Loop 4), 1 draft critiques (Loop 5)",
+      "loop": null,
+      "details": {}
+    }
+  ]
+}

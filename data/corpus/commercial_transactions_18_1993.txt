@@ -1,0 +1,50 @@
+UAE Federal Law No. 18 of 1993 on Commercial Transactions
+PLACEHOLDER / PUBLIC EXCERPT — synthetic excerpts of key chapters on contract
+formation, commercial obligations, and confidentiality, sufficient for the
+Citation Verifier and NDA-review copilot in development. Replace with the
+founder's official full text. Parsed by article using "^Article\s+\((\d+)\)".
+
+Article (2)
+Commercial activities include all acts performed by a trader for the purposes of
+his business, and all acts of trade defined under this Law, regardless of the
+status of the persons performing them. Trading in goods, services, and the
+provision of professional commercial services for consideration fall within the
+scope of this Law.
+
+Article (70)
+Parties to a commercial contract shall perform their obligations in good faith
+and in a manner consistent with the customary practices of the trade. The
+parties shall not exercise their rights in a manner that is intended to harm the
+other party or that exceeds what is necessary to protect a legitimate
+commercial interest.
+
+Article (87)
+A trader who, by reason of his profession, becomes aware of confidential
+information concerning the business of another party shall keep that
+information secret and shall not disclose it to any third party except with the
+written consent of the owner of the information or pursuant to an order of a
+competent court. Disclosure or use of such information in breach of this
+obligation entitles the injured party to compensation.
+
+Article (91)
+A party who fails to perform a commercial obligation, or who delays performance,
+shall be liable for the damages caused to the other party by reason of such
+failure or delay, unless he proves that the non-performance was due to a cause
+beyond his control. Damages shall include both the loss suffered and the loss
+of profit, provided they are a direct result of the non-performance.
+
+Article (379)
+Trade secrets, including manufacturing methods, customer lists, pricing
+formulae, and other commercial information of economic value that is not
+generally known and that the holder has taken reasonable steps to keep
+confidential, shall be protected against unlawful acquisition, use, or
+disclosure by any party, including employees, contractors, and counterparties
+to a commercial agreement.
+
+Article (396)
+Where parties to a commercial agreement have expressly agreed on duties of
+confidentiality, such duties shall be construed in accordance with the express
+terms of the agreement, supplemented by the general duties of good faith and
+trade custom under this Law. In the absence of an express term, confidentiality
+obligations relating to non-public commercial information shall survive
+termination of the commercial relationship for a reasonable period.

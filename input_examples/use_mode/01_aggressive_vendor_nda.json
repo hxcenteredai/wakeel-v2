@@ -1,0 +1,10 @@
+{
+  "_comment": "Aggressive vendor NDA — exercises Loop 4 (citation rejection) on the cross-border data-transfer clause and Loop 5 (counter-proposal critique) on the high/medium risk findings.",
+  "mode": "use",
+  "copilot_id": "cp_a6944a76",
+  "document": {
+    "type": "text",
+    "title": "Vendor Master NDA — v1 (vendor-favourable)",
+    "content": "VENDOR MASTER NON-DISCLOSURE AGREEMENT\n\n1. Confidential Information. Each party may disclose to the other certain confidential, proprietary or trade-secret information relating to its business (the \"Confidential Information\").\n\n2. Cross-border transfers. Vendor may transfer Confidential Information to its banking partners outside the UAE without further notice to the Discloser, provided Vendor exercises commercially reasonable care.\n\n3. Term and Termination. The obligation of confidentiality shall expire upon termination of this Agreement. Either party may terminate this Agreement upon seven (7) days written notice for any reason.\n\n4. Indemnity. Vendor's aggregate liability under this Agreement is capped at twelve (12) months of fees paid hereunder, irrespective of the nature of the breach.\n\n5. Governing law. This Agreement is governed by the laws of the United Arab Emirates."
+  }
+}

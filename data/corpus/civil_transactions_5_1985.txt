@@ -1,0 +1,48 @@
+UAE Federal Law No. 5 of 1985 — Civil Transactions Law (Code)
+PLACEHOLDER / PUBLIC EXCERPT — synthetic excerpts of contract formation and
+general obligations articles, sufficient for the Citation Verifier and the
+NDA-review copilot in development. Replace with the founder's official full
+text. Parsed by article using "^Article\s+\((\d+)\)".
+
+Article (125)
+A contract is the meeting of an offer made by one of the contracting parties
+with the acceptance of the other and their concurrence in such a manner as to
+determine its effect on the subject matter of the contract, giving rise to the
+obligations of each party towards the other in respect thereof.
+
+Article (129)
+The essential elements of a valid contract are: (1) agreement of the parties on
+the essential elements of the contract; (2) a subject matter that is determined
+or capable of being determined and lawful; (3) a lawful cause of obligation.
+
+Article (246)
+(1) A contract shall be performed in accordance with its terms and in a manner
+consistent with the requirements of good faith. (2) A contract shall not be
+limited to obligating a contracting party to its express terms but shall extend
+to that which is incidental to it in accordance with law, custom, and the
+nature of the transaction.
+
+Article (257)
+The basic rule in contracts is the agreement of the contracting parties and
+what they have mutually obligated themselves to do under the contract. A
+contract may not be revoked or modified except by mutual agreement of the
+parties or by an order of the court for legally prescribed reasons.
+
+Article (318)
+A person who without lawful cause obtains a benefit at the expense of another
+shall be obliged, within the limits of the benefit, to restore that benefit to
+the person from whom it was obtained, or to compensate that person for the
+value of the benefit obtained.
+
+Article (390)
+Where the contract is silent as to the duration of an obligation that by its
+nature is continuing, the obligation shall continue for such period as is
+reasonable in light of the nature of the transaction, the express purpose of
+the parties, and customary practice in transactions of the same kind.
+
+Article (905)
+A confidential agent or representative who, in the course of his commission,
+becomes aware of confidential information of the principal shall be bound to
+preserve that information and shall not use it for his own benefit or disclose
+it to third parties, except with the express authorization of the principal,
+during the engagement and for a reasonable period after termination.
