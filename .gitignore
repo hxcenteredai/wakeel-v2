@@ -17,6 +17,7 @@ data/chroma/
 
 # Copilot registry (runtime artefacts produced by mode=build)
 data/copilots/
+!data/copilots/cp_e59be014.json
 
 # Local caches (Slack/CLI tooling, etc.)
 .channels_cache.json
