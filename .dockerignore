@@ -19,6 +19,7 @@ venv/
 # Vector store and copilot registry — regenerated at runtime
 data/chroma/
 data/copilots/
+!data/copilots/cp_e59be014.json
 
 # Logs and runtime evidence (logs/samples/ is committed via .gitignore exception,
 # but we want to keep the image small; entrypoint will create fresh logs/.)
