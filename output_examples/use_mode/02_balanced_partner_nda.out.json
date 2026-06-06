@@ -47,7 +47,7 @@
   "execution_time_seconds": 0.0,
   "run_id": "<deterministic-offline-run>",
   "mode": "use",
-  "copilot_id": "cp_a6944a76",
+  "copilot_id": "cp_e59be014",
   "findings": [
     {
       "clause": "The obligation of confidentiality shall survive termination of this Agreement for a period of three (3) years, save for trade secrets, which shall remain confidential indefinitely.",
@@ -83,10 +83,10 @@
       "agent": "orchestrator",
       "action": "run_start",
       "decision": "use",
-      "reason": "POST /run mode=use copilot=cp_a6944a76",
+      "reason": "POST /run mode=use copilot=cp_e59be014",
       "loop": null,
       "details": {
-        "copilot_id": "cp_a6944a76"
+        "copilot_id": "cp_e59be014"
       }
     },
     {
