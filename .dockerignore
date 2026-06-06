@@ -1,0 +1,46 @@
+# Mirror of .gitignore patterns relevant at build context time.
+# Keeps the Docker build context small and avoids leaking dev artefacts.
+
+# Secrets & local environment
+.env
+.env.local
+.env.*.local
+
+# Python build / cache artefacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Vector store and copilot registry — regenerated at runtime
+data/chroma/
+data/copilots/
+
+# Logs and runtime evidence (logs/samples/ is committed via .gitignore exception,
+# but we want to keep the image small; entrypoint will create fresh logs/.)
+logs/
+
+# Cursor IDE / VS Code / IntelliJ noise
+.cursor/
+.idea/
+.vscode/
+*.swp
+
+# Docs/evidence artefacts not needed at runtime
+demos/
+docs/gate4-evidence/
+PO_requirements/
+
+# CI artefacts
+.pytest_chroma/
+.e2e_chroma/
+.pytest_logs/
+
+# Git history not needed at runtime
+.git/
+.gitignore
+.gitattributes
