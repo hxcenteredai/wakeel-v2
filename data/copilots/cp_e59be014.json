@@ -1,0 +1,47 @@
+{
+  "copilot_id": "cp_e59be014",
+  "template": "nda_review",
+  "org_id": "fintech_co_001",
+  "system_prompts": {
+    "reviewer": "You review NDAs against the org's tuned PDPL/Labour stance. Flag clauses with confidence scores; cite exact articles.",
+    "citation_verifier": "Verify every cited article against the corpus via exact-text retrieval; reject hallucinated citations."
+  },
+  "output_schema": {
+    "findings": [
+      {
+        "clause": "str",
+        "risk": "high|medium|low",
+        "confidence": "float",
+        "citation": {
+          "law": "str",
+          "article": "str"
+        },
+        "rationale": "str"
+      }
+    ]
+  },
+  "retrieval_rules": {
+    "laws": [
+      "Federal Decree-Law 33 of 2021",
+      "Federal Decree-Law 45 of 2021"
+    ],
+    "top_k": 5,
+    "chunk_by": "article"
+  },
+  "risk_thresholds": {
+    "high_flag_confidence_min": 0.8,
+    "medium_flag_confidence_min": 0.6,
+    "auto_escalate_to_human": [
+      "data_transfer_abroad",
+      "indemnity_caps"
+    ]
+  },
+  "interpretation_overrides": [
+    {
+      "law": "Federal Decree-Law 45 of 2021",
+      "article": "Article 7",
+      "stance": "Require explicit consent re-confirmation for cross-border transfers to banking partners.",
+      "rationale": "Conservative posture from strict-compliance debate."
+    }
+  ]
+}
