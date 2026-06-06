@@ -47,9 +47,9 @@
   "execution_time_seconds": 0.0,
   "run_id": "<deterministic-offline-run>",
   "mode": "build",
-  "copilot_id": "cp_7bc77de7",
+  "copilot_id": "cp_65b20aab",
   "config": {
-    "copilot_id": "cp_7bc77de7",
+    "copilot_id": "cp_65b20aab",
     "template": "nda_review",
     "org_id": "hospital_uae_001",
     "system_prompts": {
@@ -222,7 +222,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_7bc77de7",
+        "copilot_id": "cp_65b20aab",
         "template": "nda_review"
       }
     },
@@ -252,7 +252,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_7bc77de7",
+        "copilot_id": "cp_65b20aab",
         "template": "nda_review"
       }
     },
@@ -276,7 +276,7 @@
       "agent": "orchestrator",
       "action": "run_complete",
       "decision": "ok",
-      "reason": "copilot cp_7bc77de7 validated",
+      "reason": "copilot cp_65b20aab validated",
       "loop": null,
       "details": {}
     }

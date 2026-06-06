@@ -47,9 +47,9 @@
   "execution_time_seconds": 0.0,
   "run_id": "<deterministic-offline-run>",
   "mode": "build",
-  "copilot_id": "cp_e5b9db31",
+  "copilot_id": "cp_3db89572",
   "config": {
-    "copilot_id": "cp_e5b9db31",
+    "copilot_id": "cp_3db89572",
     "template": "nda_review",
     "org_id": "bank_uae_001",
     "system_prompts": {
@@ -222,7 +222,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_e5b9db31",
+        "copilot_id": "cp_3db89572",
         "template": "nda_review"
       }
     },
@@ -252,7 +252,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_e5b9db31",
+        "copilot_id": "cp_3db89572",
         "template": "nda_review"
       }
     },
@@ -276,7 +276,7 @@
       "agent": "orchestrator",
       "action": "run_complete",
       "decision": "ok",
-      "reason": "copilot cp_e5b9db31 validated",
+      "reason": "copilot cp_3db89572 validated",
       "loop": null,
       "details": {}
     }

@@ -47,9 +47,9 @@
   "execution_time_seconds": 0.0,
   "run_id": "<deterministic-offline-run>",
   "mode": "build",
-  "copilot_id": "cp_b7b70d90",
+  "copilot_id": "cp_57b2048a",
   "config": {
-    "copilot_id": "cp_b7b70d90",
+    "copilot_id": "cp_57b2048a",
     "template": "nda_review",
     "org_id": "fintech_co_001",
     "system_prompts": {
@@ -247,7 +247,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_b7b70d90",
+        "copilot_id": "cp_57b2048a",
         "template": "nda_review"
       }
     },
@@ -277,7 +277,7 @@
       "reason": "Copilot config generated.",
       "loop": null,
       "details": {
-        "copilot_id": "cp_b7b70d90",
+        "copilot_id": "cp_57b2048a",
         "template": "nda_review"
       }
     },
@@ -301,7 +301,7 @@
       "agent": "orchestrator",
       "action": "run_complete",
       "decision": "ok",
-      "reason": "copilot cp_b7b70d90 validated",
+      "reason": "copilot cp_57b2048a validated",
       "loop": null,
       "details": {}
     }
