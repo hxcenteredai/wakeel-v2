@@ -679,7 +679,7 @@ full audit-trail schema and storage model.
 ## 16. Demo Video
 
 **Drive folder (3 walkthrough videos):**
-[https://drive.google.com/drive/folders/15DftyotUBKH0qZXUIqAyH__y8IYZgeNk?usp=sharing](https://drive.google.com/drive/folders/15DftyotUBKH0qZXUIqAyH__y8IYZgeNk?usp=sharing)
+[https://drive.google.com/drive/folders/1nLXBq7jcrIG08VAtPjXvpC66VhmxSxEH?usp=sharing](https://drive.google.com/drive/folders/1nLXBq7jcrIG08VAtPjXvpC66VhmxSxEH?usp=sharing)
 
 Matches `metadata.json` `demo_video_url`.
 
