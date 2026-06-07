@@ -327,7 +327,7 @@ wakeel/
 │   └── llm_calls.jsonl       Per-call LLM trace (gitignored, generated)
 ├── tests/                    pytest suite (M1 + M2 acceptance gates)
 ├── docs/                     Architecture, evidence, verification, gates
-├── demos/                    3 walkthrough video stubs + RUNBOOK.md
+├── demos/                    Demo recording runbook (video hosted on Drive)
 ├── scripts/                  Generation + dev tooling (selectively committed)
 ├── run.py                    API entry point (port 8000)
 ├── run_ui.py                 Streamlit UI entry point (port 8001)
@@ -678,21 +678,15 @@ full audit-trail schema and storage model.
 
 ## 16. Demo Video
 
-**Drive folder (3 walkthrough videos):**
+**Demo video (Drive folder):**
 [https://drive.google.com/drive/folders/1nLXBq7jcrIG08VAtPjXvpC66VhmxSxEH?usp=sharing](https://drive.google.com/drive/folders/1nLXBq7jcrIG08VAtPjXvpC66VhmxSxEH?usp=sharing)
 
 Matches `metadata.json` `demo_video_url`.
 
-Per Milestone Amendment §3 criterion 6, the submission ships three technical
-walkthrough videos:
-
-| File | Scenario | Length |
-|---|---|---|
-| `demos/01_build_mode_walkthrough.mp4` | Build mode end-to-end (Loops 1–3 visible) | 60–90 s |
-| `demos/02_use_mode_walkthrough.mp4` | Use mode with the Citation Verifier rejection moment (Loop 4) — the killer demo per PRD §16 | 60–90 s |
-| `demos/03_arabic_intake_walkthrough.mp4` | Arabic intake (RTL rendering, Arabic Interviewer reply) | 60–90 s |
-
-Recording runbook + storyboard: [`demos/RUNBOOK.md`](demos/RUNBOOK.md).
+The folder contains the submission demo video (problem statement, agent
+architecture, and a live run showing Loop 4 citation rejection and the
+final findings/recommendation). Recording runbook + storyboard:
+[`demos/RUNBOOK.md`](demos/RUNBOOK.md).
 
 ---
 
@@ -708,7 +702,6 @@ Recording runbook + storyboard: [`demos/RUNBOOK.md`](demos/RUNBOOK.md).
 | 4 UAE Federal statutes ingested | Citation Verifier reliability requires a clean corpus | v1.1 expansion (data-only) |
 | No DMS integrations (iManage, NetDocuments, SharePoint) | Out of scope | v1.2 integrations |
 | No persistent customer-correction learning | Out of scope | v1.2 continuous learning |
-| Walkthrough videos in `demos/` are placeholder MP4 stubs at commit time | Real videos recorded in the founder's submission window | Replace per [`demos/RUNBOOK.md`](demos/RUNBOOK.md) |
 
 See [`docs/architecture.md` §10](docs/architecture.md#10-design-decisions-and-trade-offs)
 for the full design-decisions and trade-offs writeup.
